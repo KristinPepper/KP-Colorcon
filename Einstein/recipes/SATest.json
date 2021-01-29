@@ -1,0 +1,684 @@
+{
+    "version": "1.0",
+    "nodes": {
+        "load_0": {
+            "action": "load",
+            "parameters": {
+                "dataset": {
+                    "type": "analyticsDataset",
+                    "name": "Salesforce_Accounts",
+                    "label": "Salesforce Accounts"
+                },
+                "fields": [
+                    "Territory__c",
+                    "LastModifiedDate",
+                    "BillingCity",
+                    "Market_Code__c",
+                    "JigsawCompanyId",
+                    "Name",
+                    "Region__c",
+                    "Industry",
+                    "TickerSymbol",
+                    "AccountSource",
+                    "BillingGeocodeAccuracy",
+                    "BillingPostalCode",
+                    "PhotoUrl",
+                    "Sales_Rep__c",
+                    "IsDeleted",
+                    "LastViewedDate",
+                    "ShippingGeocodeAccuracy",
+                    "Sic",
+                    "MNG__c",
+                    "ShippingStreet",
+                    "ShippingPostalCode",
+                    "CreatedDate",
+                    "Division__c",
+                    "ShippingState",
+                    "Id",
+                    "SicDesc",
+                    "BillingState",
+                    "Jigsaw",
+                    "Site",
+                    "Ownership",
+                    "Description",
+                    "Subregion__c",
+                    "Rating",
+                    "Website",
+                    "LastReferencedDate",
+                    "Phone",
+                    "ShippingCountry",
+                    "Final_Segmentation_Value__c",
+                    "ShippingCity",
+                    "Party_Activity__c",
+                    "AccountNumber",
+                    "SystemModstamp",
+                    "Colorcon_Party_Number__c",
+                    "Type",
+                    "BillingCountry",
+                    "BillingStreet",
+                    "LastActivityDate",
+                    "Fax",
+                    "ShippingLatitude",
+                    "AnnualRevenue",
+                    "BillingLatitude",
+                    "NumberOfEmployees",
+                    "BillingLongitude",
+                    "ShippingLongitude"
+                ]
+            },
+            "sources": []
+        },
+        "load_1": {
+            "action": "load",
+            "parameters": {
+                "dataset": {
+                    "type": "analyticsDataset",
+                    "name": "Pardot_Activity",
+                    "label": "Pardot Engagement History"
+                },
+                "fields": [
+                    "AccountId",
+                    "ActorExternalId",
+                    "ActivityDate",
+                    "ProspectJobTitle",
+                    "ActivityType",
+                    "ActorId",
+                    "BucketId",
+                    "ProspectIsArchived",
+                    "AssetName",
+                    "AssetActivity",
+                    "ActorType",
+                    "Month",
+                    "AssetType",
+                    "ProspectCampaignExternalId",
+                    "ActivityCampaignName",
+                    "ActivityExternalId",
+                    "AssetExternalId",
+                    "AccountExternalId",
+                    "ActivityCampaignId",
+                    "BucketHash",
+                    "ActorName",
+                    "AssetId",
+                    "AccountName"
+                ]
+            },
+            "sources": []
+        },
+        "join_0": {
+            "action": "join",
+            "schema": {
+                "slice": {
+                    "mode": "DROP",
+                    "ignoreMissingFields": true,
+                    "fields": []
+                }
+            },
+            "parameters": {
+                "joinType": "OUTER",
+                "leftKeys": [
+                    "Id"
+                ],
+                "rightQualifier": "Pardot_",
+                "rightKeys": [
+                    "AccountId"
+                ]
+            },
+            "sources": [
+                "load_0",
+                "load_1"
+            ]
+        },
+        "schema_0": {
+            "action": "schema",
+            "parameters": {
+                "slice": {
+                    "mode": "DROP",
+                    "ignoreMissingFields": true,
+                    "fields": [
+                        "ShippingLatitude",
+                        "JigsawCompanyId",
+                        "PhotoUrl",
+                        "ShippingGeocodeAccuracy",
+                        "SicDesc",
+                        "BillingLatitude",
+                        "NumberOfEmployees",
+                        "BillingLongitude",
+                        "AccountNumber",
+                        "SystemModstamp",
+                        "BillingCountry",
+                        "BillingStreet",
+                        "LastActivityDate",
+                        "Fax",
+                        "ShippingLongitude"
+                    ]
+                },
+                "fields": [
+                    {
+                        "name": "Territory__c",
+                        "newProperties": {
+                            "name": "Territory__c"
+                        }
+                    },
+                    {
+                        "name": "LastModifiedDate",
+                        "newProperties": {
+                            "name": "LastModifiedDate"
+                        }
+                    },
+                    {
+                        "name": "BillingCity",
+                        "newProperties": {
+                            "name": "BillingCity"
+                        }
+                    },
+                    {
+                        "name": "Market_Code__c",
+                        "newProperties": {
+                            "name": "Market_Code__c"
+                        }
+                    },
+                    {
+                        "name": "Name",
+                        "newProperties": {
+                            "name": "Name"
+                        }
+                    },
+                    {
+                        "name": "Region__c",
+                        "newProperties": {
+                            "name": "Region__c"
+                        }
+                    },
+                    {
+                        "name": "Industry",
+                        "newProperties": {
+                            "name": "Industry"
+                        }
+                    },
+                    {
+                        "name": "TickerSymbol",
+                        "newProperties": {
+                            "name": "TickerSymbol"
+                        }
+                    },
+                    {
+                        "name": "AccountSource",
+                        "newProperties": {
+                            "name": "AccountSource"
+                        }
+                    },
+                    {
+                        "name": "BillingGeocodeAccuracy",
+                        "newProperties": {
+                            "name": "BillingGeocodeAccuracy"
+                        }
+                    },
+                    {
+                        "name": "BillingPostalCode",
+                        "newProperties": {
+                            "name": "BillingPostalCode"
+                        }
+                    },
+                    {
+                        "name": "Sales_Rep__c",
+                        "newProperties": {
+                            "name": "Sales_Rep__c"
+                        }
+                    },
+                    {
+                        "name": "IsDeleted",
+                        "newProperties": {
+                            "name": "IsDeleted"
+                        }
+                    },
+                    {
+                        "name": "LastViewedDate",
+                        "newProperties": {
+                            "name": "LastViewedDate"
+                        }
+                    },
+                    {
+                        "name": "Sic",
+                        "newProperties": {
+                            "name": "Sic"
+                        }
+                    },
+                    {
+                        "name": "MNG__c",
+                        "newProperties": {
+                            "name": "MNG__c"
+                        }
+                    },
+                    {
+                        "name": "ShippingStreet",
+                        "newProperties": {
+                            "name": "ShippingStreet"
+                        }
+                    },
+                    {
+                        "name": "ShippingPostalCode",
+                        "newProperties": {
+                            "name": "ShippingPostalCode"
+                        }
+                    },
+                    {
+                        "name": "CreatedDate",
+                        "newProperties": {
+                            "name": "CreatedDate"
+                        }
+                    },
+                    {
+                        "name": "Division__c",
+                        "newProperties": {
+                            "name": "Division__c"
+                        }
+                    },
+                    {
+                        "name": "ShippingState",
+                        "newProperties": {
+                            "name": "ShippingState"
+                        }
+                    },
+                    {
+                        "name": "Id",
+                        "newProperties": {
+                            "name": "Id"
+                        }
+                    },
+                    {
+                        "name": "BillingState",
+                        "newProperties": {
+                            "name": "BillingState"
+                        }
+                    },
+                    {
+                        "name": "Jigsaw",
+                        "newProperties": {
+                            "name": "Jigsaw"
+                        }
+                    },
+                    {
+                        "name": "Site",
+                        "newProperties": {
+                            "name": "Site"
+                        }
+                    },
+                    {
+                        "name": "Ownership",
+                        "newProperties": {
+                            "name": "Ownership"
+                        }
+                    },
+                    {
+                        "name": "Description",
+                        "newProperties": {
+                            "name": "Description"
+                        }
+                    },
+                    {
+                        "name": "Subregion__c",
+                        "newProperties": {
+                            "name": "Subregion__c"
+                        }
+                    },
+                    {
+                        "name": "Rating",
+                        "newProperties": {
+                            "name": "Rating"
+                        }
+                    },
+                    {
+                        "name": "Website",
+                        "newProperties": {
+                            "name": "Website"
+                        }
+                    },
+                    {
+                        "name": "LastReferencedDate",
+                        "newProperties": {
+                            "name": "LastReferencedDate"
+                        }
+                    },
+                    {
+                        "name": "Phone",
+                        "newProperties": {
+                            "name": "Phone"
+                        }
+                    },
+                    {
+                        "name": "ShippingCountry",
+                        "newProperties": {
+                            "name": "ShippingCountry"
+                        }
+                    },
+                    {
+                        "name": "Final_Segmentation_Value__c",
+                        "newProperties": {
+                            "name": "Final_Segmentation_Value__c"
+                        }
+                    },
+                    {
+                        "name": "ShippingCity",
+                        "newProperties": {
+                            "name": "ShippingCity"
+                        }
+                    },
+                    {
+                        "name": "Party_Activity__c",
+                        "newProperties": {
+                            "name": "Party_Activity__c"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ActorExternalId",
+                        "newProperties": {
+                            "name": "Pardot_.ActorExternalId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.AccountId",
+                        "newProperties": {
+                            "name": "Pardot_.AccountId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ActivityDate",
+                        "newProperties": {
+                            "name": "Pardot_.ActivityDate"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ProspectJobTitle",
+                        "newProperties": {
+                            "name": "Pardot_.ProspectJobTitle"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ActivityType",
+                        "newProperties": {
+                            "name": "Pardot_.ActivityType"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ActorId",
+                        "newProperties": {
+                            "name": "Pardot_.ActorId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.BucketId",
+                        "newProperties": {
+                            "name": "Pardot_.BucketId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ProspectIsArchived",
+                        "newProperties": {
+                            "name": "Pardot_.ProspectIsArchived"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.AssetName",
+                        "newProperties": {
+                            "name": "Pardot_.AssetName"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.AssetActivity",
+                        "newProperties": {
+                            "name": "Pardot_.AssetActivity"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ActorType",
+                        "newProperties": {
+                            "name": "Pardot_.ActorType"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.Month",
+                        "newProperties": {
+                            "name": "Pardot_.Month"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.AssetType",
+                        "newProperties": {
+                            "name": "Pardot_.AssetType"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ProspectCampaignExternalId",
+                        "newProperties": {
+                            "name": "Pardot_.ProspectCampaignExternalId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ActivityCampaignName",
+                        "newProperties": {
+                            "name": "Pardot_.ActivityCampaignName"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ActivityExternalId",
+                        "newProperties": {
+                            "name": "Pardot_.ActivityExternalId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.AssetExternalId",
+                        "newProperties": {
+                            "name": "Pardot_.AssetExternalId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.AccountExternalId",
+                        "newProperties": {
+                            "name": "Pardot_.AccountExternalId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ActivityCampaignId",
+                        "newProperties": {
+                            "name": "Pardot_.ActivityCampaignId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.BucketHash",
+                        "newProperties": {
+                            "name": "Pardot_.BucketHash"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.ActorName",
+                        "newProperties": {
+                            "name": "Pardot_.ActorName"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.AssetId",
+                        "newProperties": {
+                            "name": "Pardot_.AssetId"
+                        }
+                    },
+                    {
+                        "name": "Pardot_.AccountName",
+                        "newProperties": {
+                            "name": "Pardot_.AccountName"
+                        }
+                    },
+                    {
+                        "name": "Colorcon_Party_Number__c",
+                        "newProperties": {
+                            "name": "Colorcon_Party_Number__c"
+                        }
+                    },
+                    {
+                        "name": "Type",
+                        "newProperties": {
+                            "name": "Type"
+                        }
+                    },
+                    {
+                        "name": "AnnualRevenue",
+                        "newProperties": {
+                            "name": "AnnualRevenue"
+                        }
+                    }
+                ]
+            },
+            "sources": [
+                "join_0"
+            ]
+        },
+        "save_0": {
+            "action": "save",
+            "parameters": {
+                "dataset": {
+                    "type": "analyticsDataset",
+                    "name": "SATest3",
+                    "label": "SATest",
+                    "folderName": "B2BMA_V_2"
+                },
+                "fields": []
+            },
+            "sources": [
+                "schema_0"
+            ]
+        }
+    },
+    "ui": {
+        "nodes": {
+            "load_0": {
+                "label": "Salesforce Accounts",
+                "type": "LOAD_DATASET",
+                "top": 112,
+                "left": 252,
+                "parameters": {
+                    "sampleSize": 5000
+                }
+            },
+            "load_1": {
+                "label": "Pardot Engagement History",
+                "type": "LOAD_DATASET",
+                "top": 112,
+                "left": 112,
+                "parameters": {
+                    "sampleSize": 5000
+                }
+            },
+            "join_0": {
+                "label": "Join",
+                "type": "JOIN",
+                "top": 112,
+                "left": 392
+            },
+            "TRANSFORM0": {
+                "label": "Transform",
+                "type": "TRANSFORM",
+                "top": 112,
+                "left": 532,
+                "graph": {
+                    "schema_0": null
+                },
+                "connectors": []
+            },
+            "save_0": {
+                "label": "Output",
+                "type": "OUTPUT",
+                "top": 112,
+                "left": 672
+            }
+        },
+        "connectors": [
+            {
+                "source": "load_0",
+                "target": "join_0"
+            },
+            {
+                "source": "load_1",
+                "target": "join_0"
+            },
+            {
+                "source": "join_0",
+                "target": "TRANSFORM0"
+            },
+            {
+                "source": "TRANSFORM0",
+                "target": "save_0"
+            }
+        ],
+        "hiddenColumns": [
+            {
+                "fieldName": "AccountNumber",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "SystemModstamp",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "Colorcon_Party_Number__c",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "Type",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "BillingCountry",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "BillingStreet",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "LastActivityDate",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "Fax",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "ShippingLatitude",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "AnnualRevenue",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "BillingLatitude",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "NumberOfEmployees",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "BillingLongitude",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            },
+            {
+                "fieldName": "ShippingLongitude",
+                "objectType": "analyticsDataset",
+                "objectName": "Salesforce_Accounts"
+            }
+        ]
+    }
+}

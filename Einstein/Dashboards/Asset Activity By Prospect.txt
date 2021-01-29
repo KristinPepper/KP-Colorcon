@@ -1,0 +1,524 @@
+{
+    "label": "Asset Activity By Prospect",
+    "mobileDisabled": false,
+    "description": "Copy of Campaign Detail - Engagement History",
+    "state": {
+        "dataSourceLinks": [],
+        "filters": [
+            {
+                "dataset": {
+                    "id": "0Fb5w0000005ajcCAA",
+                    "name": "Pardot_Activity",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+                },
+                "dependent": false,
+                "fields": [
+                    "ActivityDate"
+                ],
+                "label": "Activity Date",
+                "locked": false,
+                "operator": ">=<=",
+                "value": [
+                    [
+                        [
+                            "day",
+                            -30
+                        ],
+                        [
+                            "day",
+                            0
+                        ]
+                    ]
+                ]
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w0000005ajcCAA",
+                    "name": "Pardot_Activity",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+                },
+                "dependent": false,
+                "fields": [
+                    "AssetType"
+                ],
+                "label": "Asset Type",
+                "locked": false,
+                "operator": "in",
+                "value": []
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w0000005ajcCAA",
+                    "name": "Pardot_Activity",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+                },
+                "dependent": false,
+                "fields": [
+                    "ActivityType"
+                ],
+                "label": "Activity Type",
+                "locked": false,
+                "operator": "in"
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w0000005ajcCAA",
+                    "name": "Pardot_Activity",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+                },
+                "dependent": true,
+                "fields": [
+                    "ActivityCampaignName"
+                ],
+                "locked": false,
+                "operator": "in"
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w0000005ajcCAA",
+                    "name": "Pardot_Activity",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+                },
+                "dependent": true,
+                "fields": [
+                    "AccountName"
+                ],
+                "locked": false,
+                "operator": "in"
+            }
+        ],
+        "gridLayouts": [
+            {
+                "name": "Default",
+                "numColumns": 12,
+                "pages": [
+                    {
+                        "label": "Untitled",
+                        "name": "0afb9071-05a2-4cd4-bc57-d9b94cdaeb5f",
+                        "navigationHidden": false,
+                        "widgets": [
+                            {
+                                "colspan": 12,
+                                "column": 0,
+                                "name": "table_1",
+                                "row": 7,
+                                "rowspan": 8,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 12,
+                                "column": 0,
+                                "name": "chart_1",
+                                "row": 1,
+                                "rowspan": 6,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 12,
+                                "column": 0,
+                                "name": "filterpanel_1",
+                                "row": 0,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#F2F6FA",
+                                    "borderEdges": []
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "rowHeight": "normal",
+                "selectors": [],
+                "style": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "backgroundColor": "#F2F6FA",
+                    "cellSpacingX": 8,
+                    "cellSpacingY": 8,
+                    "fit": "original",
+                    "gutterColor": "#C5D3E0"
+                },
+                "version": 1
+            }
+        ],
+        "layouts": [],
+        "steps": {
+            "TimelineChart_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb5w0000005ajcCAA",
+                        "label": "Pardot Engagement History",
+                        "name": "Pardot_Activity",
+                        "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "TimelineChart",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        [
+                            "ActivityDate_Year",
+                            "ActivityDate_Month",
+                            "ActivityDate_Day"
+                        ],
+                        "AssetActivity"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "showPoints": false,
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "showBinLabel": true,
+                            "measures": "",
+                            "showNullValues": true,
+                            "showPercentage": true,
+                            "showDimensions": true,
+                            "showMeasures": true,
+                            "customizeTooltip": false,
+                            "dimensions": ""
+                        },
+                        "visualizationType": "time",
+                        "missingValue": "connect",
+                        "dashLine": {
+                            "measures": "",
+                            "showDashLine": false
+                        },
+                        "timeAxis": {
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": ""
+                        },
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "split": [
+                                "AssetActivity"
+                            ],
+                            "timeAxis": [
+                                "ActivityDate_Year~~~ActivityDate_Month~~~ActivityDate_Day"
+                            ],
+                            "trellis": [],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "fillArea": true,
+                        "showActionMenu": true,
+                        "showZero": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "none",
+                        "theme": "wave",
+                        "applyConditionalFormatting": true,
+                        "drawArea": {
+                            "measure": "",
+                            "showDrawArea": false,
+                            "bounding1": "",
+                            "bounding2": ""
+                        }
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "ActivityGrid_1": {
+                "datasets": [
+                    {
+                        "id": "0Fb5w0000005ajcCAA",
+                        "label": "Pardot Engagement History",
+                        "name": "Pardot_Activity",
+                        "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+                    }
+                ],
+                "isFacet": true,
+                "isGlobal": false,
+                "label": "ActivityGrid",
+                "query": {
+                    "values": [
+                        "ActorName",
+                        "ActorType",
+                        "AccountName",
+                        "ActivityType",
+                        "AssetType",
+                        "AssetName",
+                        "ActivityDate"
+                    ]
+                },
+                "type": "grain",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "options": {},
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "maxColumnWidth": 300,
+                        "minColumnWidth": 40,
+                        "mode": "variable",
+                        "numberOfLines": 1,
+                        "showActionMenu": true,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            }
+        },
+        "widgetStyle": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#E6ECF2",
+            "borderEdges": [],
+            "borderRadius": 0,
+            "borderWidth": 1
+        },
+        "widgets": {
+            "table_1": {
+                "parameters": {
+                    "borderColor": "#e0e5ee",
+                    "borderWidth": 1,
+                    "cell": {
+                        "backgroundColor": "#ffffff",
+                        "fontColor": "#16325c",
+                        "fontSize": 12
+                    },
+                    "columnProperties": {},
+                    "columns": [],
+                    "customBulkActions": [],
+                    "exploreLink": false,
+                    "header": {
+                        "backgroundColor": "#f4f6f9",
+                        "fontColor": "#16325c",
+                        "fontSize": 12
+                    },
+                    "innerMajorBorderColor": "#a8b7c7",
+                    "innerMinorBorderColor": "#e0e5ee",
+                    "maxColumnWidth": 300,
+                    "minColumnWidth": 40,
+                    "mode": "variable",
+                    "numberOfLines": 1,
+                    "showActionMenu": true,
+                    "showRowIndexColumn": false,
+                    "step": "ActivityGrid_1",
+                    "totals": true,
+                    "verticalPadding": 4,
+                    "evenRowColor": null,
+                    "oddRowColor": null
+                },
+                "type": "table"
+            },
+            "filterpanel_1": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "backgroundColor": "#FFFFFF",
+                        "borderColor": "#FFFFFF",
+                        "borderRadius": 4,
+                        "borderWidth": 1,
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [],
+                    "itemsPerRow": 6,
+                    "showAllFilters": true,
+                    "title": {
+                        "separatorColor": "#E6ECF2",
+                        "text": {
+                            "align": "left",
+                            "color": "#091A3E",
+                            "fontSize": 16,
+                            "label": "Filters"
+                        },
+                        "visible": false
+                    }
+                },
+                "type": "filterpanel"
+            },
+            "chart_1": {
+                "parameters": {
+                    "showPoints": false,
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "showBinLabel": true,
+                        "measures": "",
+                        "showNullValues": true,
+                        "showPercentage": true,
+                        "showDimensions": true,
+                        "showMeasures": true,
+                        "customizeTooltip": false,
+                        "dimensions": ""
+                    },
+                    "visualizationType": "time",
+                    "missingValue": "connect",
+                    "dashLine": {
+                        "measures": [
+                            "count"
+                        ],
+                        "showDashLine": false
+                    },
+                    "exploreLink": false,
+                    "timeAxis": {
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": ""
+                    },
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "parameters": {},
+                        "chartsPerLine": 4
+                    },
+                    "fillArea": false,
+                    "columnMap": {
+                        "split": [
+                            "AssetActivity"
+                        ],
+                        "timeAxis": [
+                            "ActivityDate_Year~~~ActivityDate_Month~~~ActivityDate_Day"
+                        ],
+                        "trellis": [],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "showZero": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "referenceLines": [
+                            {
+                                "color": "rgb(0, 161, 224)",
+                                "value": {
+                                    "data": 0,
+                                    "type": "static"
+                                }
+                            }
+                        ],
+                        "title": "Activity Count",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "none",
+                    "theme": "wave",
+                    "step": "TimelineChart_1",
+                    "applyConditionalFormatting": true,
+                    "drawArea": {
+                        "measure": "",
+                        "showDrawArea": false,
+                        "bounding1": "",
+                        "bounding2": ""
+                    }
+                },
+                "type": "chart"
+            }
+        }
+    },
+    "datasets": [
+        {
+            "id": "0Fb5w0000005ajcCAA",
+            "label": "Pardot Engagement History",
+            "name": "Pardot_Activity",
+            "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+        }
+    ]
+}

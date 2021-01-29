@@ -1,0 +1,1282 @@
+{
+    "label": "Campaign Activities By Prospect",
+    "mobileDisabled": false,
+    "description": "Copy of Account Details 2.0_SA",
+    "state": {
+        "dataSourceLinks": [],
+        "filters": [
+            {
+                "dataset": {
+                    "id": "0Fb5w000000dRJiCAM",
+                    "name": "SATest3",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                },
+                "dependent": true,
+                "fields": [
+                    "Region__c"
+                ],
+                "locked": false,
+                "operator": "in"
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w000000dRJiCAM",
+                    "name": "SATest3",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                },
+                "dependent": true,
+                "fields": [
+                    "Pardot_.ActivityDate"
+                ],
+                "label": "Activity Date",
+                "locked": false,
+                "operator": ">=<="
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w000000dRJiCAM",
+                    "name": "SATest3",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                },
+                "dependent": true,
+                "fields": [
+                    "Pardot_.AssetType"
+                ],
+                "locked": false,
+                "operator": "in"
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w000000dRJiCAM",
+                    "name": "SATest3",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                },
+                "dependent": true,
+                "fields": [
+                    "Pardot_.ActivityType"
+                ],
+                "locked": false,
+                "operator": "in"
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w000000dRJiCAM",
+                    "name": "SATest3",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                },
+                "dependent": true,
+                "fields": [
+                    "Name"
+                ],
+                "locked": false,
+                "operator": "in"
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w0000005ajcCAA",
+                    "name": "Pardot_Activity",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+                },
+                "dependent": true,
+                "fields": [
+                    "ActorType"
+                ],
+                "locked": false,
+                "operator": "in"
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w000000dRJiCAM",
+                    "name": "SATest3",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                },
+                "dependent": true,
+                "fields": [
+                    "Pardot_.ActivityCampaignName"
+                ],
+                "label": "Activity Campaign name",
+                "locked": false,
+                "operator": "in"
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w000000dRJiCAM",
+                    "name": "SATest3",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                },
+                "dependent": true,
+                "fields": [
+                    "Subregion__c"
+                ],
+                "locked": false,
+                "operator": "in"
+            },
+            {
+                "dataset": {
+                    "id": "0Fb5w000000dRJiCAM",
+                    "name": "SATest3",
+                    "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                },
+                "dependent": true,
+                "fields": [
+                    "Pardot_.ActorName"
+                ],
+                "locked": false,
+                "operator": "in"
+            }
+        ],
+        "gridLayouts": [
+            {
+                "name": "Default",
+                "numColumns": 12,
+                "pages": [
+                    {
+                        "label": "Untitled",
+                        "name": "ff9d5975-2758-4aa6-8dea-acb1976e8c08",
+                        "navigationHidden": false,
+                        "widgets": [
+                            {
+                                "colspan": 2,
+                                "column": 0,
+                                "name": "filterpanel_1",
+                                "row": 0,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 5,
+                                "column": 0,
+                                "name": "chart_1",
+                                "row": 1,
+                                "rowspan": 6,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 5,
+                                "name": "chart_2",
+                                "row": 1,
+                                "rowspan": 5,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 2,
+                                "column": 2,
+                                "name": "filterpanel_2",
+                                "row": 0,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 4,
+                                "column": 8,
+                                "name": "chart_4",
+                                "row": 2,
+                                "rowspan": 5,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 2,
+                                "column": 6,
+                                "name": "filterpanel_4",
+                                "row": 0,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 2,
+                                "column": 8,
+                                "name": "filterpanel_6",
+                                "row": 0,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 2,
+                                "column": 10,
+                                "name": "filterpanel_7",
+                                "row": 0,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 12,
+                                "column": 0,
+                                "name": "table_4",
+                                "row": 8,
+                                "rowspan": 14,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 2,
+                                "column": 4,
+                                "name": "filterpanel_9",
+                                "row": 0,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 2,
+                                "column": 10,
+                                "name": "filterpanel_3",
+                                "row": 1,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "rowHeight": "normal",
+                "selectors": [],
+                "style": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "backgroundColor": "#F2F6FA",
+                    "cellSpacingX": 8,
+                    "cellSpacingY": 8,
+                    "fit": "original",
+                    "gutterColor": "#C5D3E0"
+                },
+                "version": 1
+            }
+        ],
+        "layouts": [],
+        "steps": {
+            "Pardot__ActorName_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb5w000000dRJiCAM",
+                        "label": "SATest",
+                        "name": "SATest3",
+                        "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "Pardot__ActorName_1",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "limit": 20,
+                    "groups": [
+                        "Pardot_.ActorName"
+                    ],
+                    "filters": [
+                        [
+                            "Pardot_.ActorName",
+                            [
+                                "[[Unknown]]"
+                            ],
+                            "not in"
+                        ]
+                    ],
+                    "order": [
+                        [
+                            "count",
+                            {
+                                "ascending": false
+                            }
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showValues": true,
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": false,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "showBinLabel": true,
+                            "measures": "",
+                            "showNullValues": true,
+                            "showPercentage": true,
+                            "showDimensions": true,
+                            "showMeasures": true,
+                            "customizeTooltip": false,
+                            "dimensions": ""
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "Most Active",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnProperties": {},
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Pardot_.ActorName"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": false,
+                            "showAxis": false,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "Pardot__ActivityCamp_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb5w000000dRJiCAM",
+                        "label": "SATest",
+                        "name": "SATest3",
+                        "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "Pardot_.ActivityCampaignName"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "centerText": "",
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "showMeasureTitle": true,
+                        "tooltip": {
+                            "showBinLabel": true,
+                            "measures": "",
+                            "showNullValues": true,
+                            "showPercentage": true,
+                            "showDimensions": true,
+                            "showMeasures": true,
+                            "customizeTooltip": false,
+                            "dimensions": ""
+                        },
+                        "visualizationType": "pie",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "inner": 60,
+                        "columnMap": {
+                            "trellis": [],
+                            "dimension": [
+                                "Pardot_.ActivityCampaignName"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "centerValueType": "number",
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "Pardot__ActivityDate_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb5w000000dRJiCAM",
+                        "label": "SATest",
+                        "name": "SATest3",
+                        "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        [
+                            "Pardot_.ActivityDate_Year",
+                            "Pardot_.ActivityDate_Month",
+                            "Pardot_.ActivityDate_Day"
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "showPoints": false,
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "showBinLabel": true,
+                            "measures": "",
+                            "showNullValues": true,
+                            "showPercentage": true,
+                            "showDimensions": true,
+                            "showMeasures": true,
+                            "customizeTooltip": false,
+                            "dimensions": ""
+                        },
+                        "visualizationType": "time",
+                        "missingValue": "connect",
+                        "dashLine": {
+                            "measures": "",
+                            "showDashLine": false
+                        },
+                        "timeAxis": {
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": ""
+                        },
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "split": [],
+                            "timeAxis": [
+                                "Pardot_.ActivityDate_Year~~~Pardot_.ActivityDate_Month~~~Pardot_.ActivityDate_Day"
+                            ],
+                            "trellis": [],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "fillArea": true,
+                        "showActionMenu": true,
+                        "showZero": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "none",
+                        "theme": "wave",
+                        "applyConditionalFormatting": true,
+                        "drawArea": {
+                            "measure": "",
+                            "showDrawArea": false,
+                            "bounding1": "",
+                            "bounding2": ""
+                        }
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "lens_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb5w000000dRJiCAM",
+                        "label": "SATest",
+                        "name": "SATest3",
+                        "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                    },
+                    {
+                        "id": "0Fb5w0000005ajcCAA",
+                        "label": "Pardot Engagement History",
+                        "name": "Pardot_Activity",
+                        "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "aggregateFilters": [],
+                    "limit": 2000,
+                    "orders": [],
+                    "sourceFilters": {},
+                    "sources": [
+                        {
+                            "cogroupType": "left",
+                            "columns": [
+                                {
+                                    "field": [
+                                        "count",
+                                        "*"
+                                    ],
+                                    "name": "A"
+                                }
+                            ],
+                            "groups": [
+                                "all"
+                            ],
+                            "name": "Pardot_Activity"
+                        },
+                        {
+                            "columns": [],
+                            "groups": [
+                                "all"
+                            ],
+                            "name": "SATest3"
+                        }
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "options": {},
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "maxColumnWidth": 300,
+                        "minColumnWidth": 40,
+                        "mode": "variable",
+                        "numberOfLines": 1,
+                        "showActionMenu": true,
+                        "showRowIndexColumn": false,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            },
+            "lens_2": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb5w000000dRJiCAM",
+                        "label": "SATest",
+                        "name": "SATest3",
+                        "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "lens_2",
+                "query": {
+                    "values": [
+                        "Pardot_.AccountName",
+                        "Pardot_.ActorName",
+                        "Pardot_.ActorType",
+                        "Pardot_.ActivityType",
+                        "Pardot_.ActivityCampaignName",
+                        "Pardot_.AssetName",
+                        "Pardot_.AssetType",
+                        "Pardot_.ActivityDate"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "options": {},
+                    "parameters": {
+                        "borderColor": "#a8b7c7",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#16325c",
+                            "fontColor": "#ffffff",
+                            "fontSize": 12
+                        },
+                        "innerMajorBorderColor": "#54698d",
+                        "innerMinorBorderColor": "#a8b7c7",
+                        "mode": "fittocontainer",
+                        "numberOfLines": 1,
+                        "showActionMenu": true,
+                        "showRowIndexColumn": true,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            }
+        },
+        "widgetStyle": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#E6ECF2",
+            "borderEdges": [],
+            "borderRadius": 0,
+            "borderWidth": 1
+        },
+        "widgets": {
+            "filterpanel_9": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [
+                        {
+                            "dataset": {
+                                "name": "SATest3"
+                            },
+                            "field": "Pardot_.ActivityCampaignName"
+                        }
+                    ],
+                    "showAllFilters": false
+                },
+                "type": "filterpanel"
+            },
+            "filterpanel_7": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [
+                        {
+                            "dataset": {
+                                "name": "SATest3"
+                            },
+                            "field": "Name"
+                        }
+                    ],
+                    "showAllFilters": false
+                },
+                "type": "filterpanel"
+            },
+            "table_4": {
+                "parameters": {
+                    "borderColor": "#a8b7c7",
+                    "borderWidth": 1,
+                    "cell": {
+                        "backgroundColor": "#ffffff",
+                        "fontColor": "#16325c",
+                        "fontSize": 12
+                    },
+                    "columnProperties": {},
+                    "columns": [],
+                    "customBulkActions": [],
+                    "exploreLink": true,
+                    "header": {
+                        "backgroundColor": "#16325c",
+                        "fontColor": "#ffffff",
+                        "fontSize": 12
+                    },
+                    "innerMajorBorderColor": "#54698d",
+                    "innerMinorBorderColor": "#a8b7c7",
+                    "mode": "fittocontainer",
+                    "numberOfLines": 1,
+                    "showActionMenu": true,
+                    "showRowIndexColumn": true,
+                    "step": "lens_2",
+                    "totals": true,
+                    "verticalPadding": 8,
+                    "evenRowColor": null,
+                    "oddRowColor": null
+                },
+                "type": "table"
+            },
+            "filterpanel_6": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [
+                        {
+                            "dataset": {
+                                "name": "SATest3"
+                            },
+                            "field": "Pardot_.ActivityType"
+                        }
+                    ],
+                    "showAllFilters": false
+                },
+                "type": "filterpanel"
+            },
+            "filterpanel_4": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [
+                        {
+                            "dataset": {
+                                "name": "SATest3"
+                            },
+                            "field": "Pardot_.AssetType"
+                        }
+                    ],
+                    "showAllFilters": false
+                },
+                "type": "filterpanel"
+            },
+            "filterpanel_3": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [
+                        {
+                            "dataset": {
+                                "name": "SATest3"
+                            },
+                            "field": "Pardot_.ActorName"
+                        }
+                    ],
+                    "showAllFilters": false
+                },
+                "type": "filterpanel"
+            },
+            "filterpanel_2": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [
+                        {
+                            "dataset": {
+                                "name": "SATest3"
+                            },
+                            "field": "Pardot_.ActivityDate"
+                        }
+                    ],
+                    "showAllFilters": false
+                },
+                "type": "filterpanel"
+            },
+            "filterpanel_1": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [
+                        {
+                            "dataset": {
+                                "name": "SATest3"
+                            },
+                            "field": "Region__c"
+                        }
+                    ],
+                    "showAllFilters": false
+                },
+                "type": "filterpanel"
+            },
+            "chart_2": {
+                "parameters": {
+                    "showPoints": false,
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": false,
+                        "show": false,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "showBinLabel": true,
+                        "measures": "",
+                        "showNullValues": true,
+                        "showPercentage": true,
+                        "showDimensions": true,
+                        "showMeasures": true,
+                        "customizeTooltip": false,
+                        "dimensions": ""
+                    },
+                    "missingValue": "connect",
+                    "visualizationType": "time",
+                    "dashLine": {
+                        "measures": "",
+                        "showDashLine": false
+                    },
+                    "timeAxis": {
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": ""
+                    },
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "Engagement Over Time",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "fillArea": true,
+                    "columnMap": {
+                        "split": [],
+                        "timeAxis": [
+                            "Pardot_.ActivityDate_Year~~~Pardot_.ActivityDate_Month~~~Pardot_.ActivityDate_Day"
+                        ],
+                        "trellis": [],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "showZero": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "none",
+                    "theme": "wave",
+                    "step": "Pardot__ActivityDate_1",
+                    "applyConditionalFormatting": true,
+                    "drawArea": {
+                        "measure": "",
+                        "showDrawArea": false,
+                        "bounding1": "",
+                        "bounding2": ""
+                    }
+                },
+                "type": "chart"
+            },
+            "chart_1": {
+                "parameters": {
+                    "centerText": "",
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "showMeasureTitle": true,
+                    "tooltip": {
+                        "showBinLabel": true,
+                        "measures": "",
+                        "showNullValues": true,
+                        "showPercentage": true,
+                        "showDimensions": true,
+                        "showMeasures": true,
+                        "customizeTooltip": false,
+                        "dimensions": ""
+                    },
+                    "visualizationType": "pie",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "inner": 60,
+                    "columnMap": {
+                        "trellis": [],
+                        "dimension": [
+                            "Pardot_.ActivityCampaignName"
+                        ],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "centerValueType": "number",
+                    "valueType": "compactNumber",
+                    "theme": "wave",
+                    "step": "Pardot__ActivityCamp_1",
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_4": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "showValues": true,
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": false,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "showBinLabel": true,
+                        "measures": "",
+                        "showNullValues": true,
+                        "showPercentage": true,
+                        "showDimensions": true,
+                        "showMeasures": true,
+                        "customizeTooltip": false,
+                        "dimensions": ""
+                    },
+                    "visualizationType": "hbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "Most Active",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnProperties": {},
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "Pardot_.ActorName"
+                        ],
+                        "plots": [
+                            "count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": false,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "Pardot__ActorName_1",
+                    "dimensionAxis": {
+                        "showTitle": true,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            }
+        }
+    },
+    "datasets": [
+        {
+            "id": "0Fb5w0000005ajcCAA",
+            "label": "Pardot Engagement History",
+            "name": "Pardot_Activity",
+            "url": "/services/data/v50.0/wave/datasets/0Fb5w0000005ajcCAA"
+        },
+        {
+            "id": "0Fb5w000000dRJiCAM",
+            "label": "SATest",
+            "name": "SATest3",
+            "url": "/services/data/v50.0/wave/datasets/0Fb5w000000dRJiCAM"
+        }
+    ]
+}
